@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
+  font-family: "Montserrat", sans-serif;
+}
+
+.durability-section {
+  background-color: #000000;
+  height: 600vh;
+  width: 100%;
+}
+
+.durability-header {
+  color: white;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  /* padding: 10%; */
+  text-align: center;
+  font-weight: 900;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+}
+
+.slider-section {
+  height: 33vh;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.wheel {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300vw;
+  height: 300vw;
+  max-width: 2000px;
+  max-height: 2000px;
+}
+
+.durable-tyres-card-container {
+  width: clamp(300px, 50vw, 450px);
+  height: clamp(300px, 50vw, 450px);
+  color: white;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6%;
+  aspect-ratio: 1/1;
+}
+.durable-tyre-image {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+}
+
+.durable-tyre-text-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(0.9rem, 3vw, 1.25rem);
+  text-transform: uppercase;
+}
+
+.durable-hover-button {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #000000c3;
+  padding: 2% 3%;
+  border-radius: 25%;
+  z-index: 9;
+}
+
+.durable-tyre-card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 5, 6, 0.353);
+  z-index: 9;
+}
+
+.durable-tyres-card-container:hover .durable-tyre-card-overlay {
+  opacity: 1;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.durable-hover-button:active {
+  filter: brightness(80%);
+}
+
+.durable-tyres-card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  max-width: 500px;
+  cursor: pointer;
+}
+
+.durable-tyres-card-container img {
+  /* width: 100%; */
+  pointer-events: none;
+  z-index: 1;
+  cursor: pointer;
+}
